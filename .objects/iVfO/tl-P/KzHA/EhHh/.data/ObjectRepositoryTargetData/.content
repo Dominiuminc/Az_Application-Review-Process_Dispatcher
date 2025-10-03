@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="59ZmrbWl3024XnVQyVU8sQ" Reference="N1pVCWfJn0a95dtdHAvGAw/EhHhEjHcmEKBu4b2UlL4Gg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://dominiuminc.okta.com/login/agentlessDsso/idx?stateToken=ckVsbFdINnI0aTRmWTRoVE1tamdFMmhaUFRxM3c1VGNES21pWXZTZ1JXdldNbERsYzMwZVJiWmZiWTRjL2dzMQ&amp;precheckFailure=true&amp;redirectFromAdsso=true" CVScreenId="d6342a95-fabc-4870-b5b9-74eecbde1aba" CvElementArea="805, 471, 317, 42" CvType="InputBox" DesignTimeRectangle="807, 473, 314, 38" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='input28' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='input28' tag='INPUT' type='text' class='' aaname='Username ' /&gt;" Guid="33bff573-e281-465a-9e50-c6b961061e80" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dominium - Prod - Sign In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="d6342a95-fabc-4870-b5b9-74eecbde1aba" CvTextArea="805, 450, 71, 13" CvTextArgument="Username" CvType="Text" DesignTimeRectangle="806, 448, 73, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Username ' check:innerText='Username' /&gt;" Guid="16a9eb54-3759-4497-89e2-df6d70aded60" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="3e309c7862b0783a51dde06305f85b0c.png" xmlns="">0fBJ62XQ1NEGOJgd0f4kXMw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

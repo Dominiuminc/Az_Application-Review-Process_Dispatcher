@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Check App State 'Sign in with YardiOne'",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "mFR_jQk0dkCW38Q-88Bt9Q",
+  "Reference": "N1pVCWfJn0a95dtdHAvGAw/mFR_jQk0dkCW38Q-88Bt9Q",
+  "ParentRef": "N1pVCWfJn0a95dtdHAvGAw/KzHAPmUNKU6K2oV8ymoyCg",
+  "Created": "2025-08-14T15:40:31.8045923Z",
+  "Updated": "2025-08-14T15:40:31.8045923Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

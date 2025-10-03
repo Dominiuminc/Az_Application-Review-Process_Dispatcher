@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Click 'Details'",
+  "Type": "Element",
+  "Id": "9f96nd4KzUaHi7WcL1icLg",
+  "Reference": "N1pVCWfJn0a95dtdHAvGAw/9f96nd4KzUaHi7WcL1icLg",
+  "ParentRef": "N1pVCWfJn0a95dtdHAvGAw/Q4d8VrlUuE6xT-tDYGZwlw",
+  "Created": "2025-08-25T18:12:41.9448722Z",
+  "Updated": "2025-08-25T18:12:41.9448722Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

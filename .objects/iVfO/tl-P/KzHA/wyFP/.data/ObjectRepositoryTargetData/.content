@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="QK9Vkviyn0iw5ujgvKd37w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://dominiuminc.okta.com/login/agentlessDsso/idx?stateToken=ckVsbFdINnI0aTRmWTRoVE1tamdFMmhaUFRxM3c1VGNES21pWXZTZ1JXdldNbERsYzMwZVJiWmZiWTRjL2dzMQ&amp;precheckFailure=true&amp;redirectFromAdsso=true" DesignTimeRectangle="807, 597, 314, 38" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='input29' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='input29' tag='INPUT' type='password' class='password-with-toggle' aaname='Password ' /&gt;" Guid="72031212-d2df-4ad8-98c2-b8d5e8dd9816" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dominium - Prod - Sign In' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="6c2d21f5-8d3d-44dc-9bcf-a126b9f1bd3d" CvTextArea="805, 573, 67, 14" CvTextArgument="Password" CvType="Text" DesignTimeRectangle="806, 572, 70, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Password ' check:innerText='Password' /&gt;" Guid="c41ec507-a4b7-4ccc-a79e-c671244cd33c" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="4e1125f65107abb6656c95d02c8e5a08.png" xmlns="">07yCvNoO3qUS_h8yU32H7IA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="VBiICtJTb0mesHTLlAjx3g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://dominiuminc.okta.com/login/agentlessDsso/idx?stateToken=ckVsbFdINnI0aTRmWTRoVE1tamdFMmhaUFRxM3c1VGNES21pWXZTZ1JXdldNbERsYzMwZVJiWmZiWTRjL2dzMQ&amp;precheckFailure=true&amp;redirectFromAdsso=true" CVScreenId="6c2d21f5-8d3d-44dc-9bcf-a126b9f1bd3d" CvElementArea="805, 663, 319, 52" CvTextArea="943, 681, 41, 17" CvTextArgument="Verify" CvType="Button" DesignTimeRectangle="806, 664, 316, 50" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='button button-primary' aaname='Verify' check:text='Verify' /&gt;" Guid="f88205cd-6c16-4b34-9da9-d6100b9ca556" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dominium - Prod - Sign In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="80ff57cefa6e124ec3e81541acf90b31.png" xmlns="">0qUAliwkpCUqnq-_kg5REMQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

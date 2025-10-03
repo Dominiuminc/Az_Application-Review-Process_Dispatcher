@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Yardi_Login",
+  "Type": "Screen",
+  "Id": "TGFpdj8mjEuqYkXMgI5B5A",
+  "Reference": "N1pVCWfJn0a95dtdHAvGAw/TGFpdj8mjEuqYkXMgI5B5A",
+  "ParentRef": "N1pVCWfJn0a95dtdHAvGAw/tl-P_lzmh0Kf5U6Rg4PgIA",
+  "Created": "2025-08-14T15:30:53.60709Z",
+  "Updated": "2025-08-14T15:35:26.3532211Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

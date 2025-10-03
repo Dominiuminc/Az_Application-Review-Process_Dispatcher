@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="OJXV3js8m060by2sH8rFnA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://dominium31024.yardione.com/yAuth2/identity/Account/TermsAndConditions?isExternalLogin=True" CVScreenId="2400b6cb-522c-4705-91be-6b9c92001286" CvTextArea="844, 430, 239, 22" CvType="AnyWordGroup" DesignTimeRectangle="790, 426, 348, 29" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H2' type='' class='text-center mb-3 h4' /&gt;" Guid="32d658ff-a747-4ac1-82b3-a5490039f69a" ScopeSelectorArgument="&lt;html app='msedge.exe' title='YardiOne Dashboard' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="022274df65424d6d68bd975643fa87a2.png" xmlns="">0HB_PnEEcnU-LHqXfZbc4BA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

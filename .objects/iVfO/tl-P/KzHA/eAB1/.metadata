@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Get Text 'Terms and Conditions'",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "eAB1eSm0b0CD9QA0AL--wQ",
+  "Reference": "N1pVCWfJn0a95dtdHAvGAw/eAB1eSm0b0CD9QA0AL--wQ",
+  "ParentRef": "N1pVCWfJn0a95dtdHAvGAw/KzHAPmUNKU6K2oV8ymoyCg",
+  "Created": "2025-08-14T15:40:15.4967002Z",
+  "Updated": "2025-08-14T15:40:15.4967002Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

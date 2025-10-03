@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="s3VZT3RFJEqpofFF_Ylmww" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://dominiuminc.okta.com/login/agentlessDsso/idx?stateToken=ckVsbFdINnI0aTRmWTRoVE1tamdFMmhaUFRxM3c1VGNES21pWXZTZ1JXdldNbERsYzMwZVJiWmZiWTRjL2dzMQ&amp;precheckFailure=true&amp;redirectFromAdsso=true" DesignTimeRectangle="807, 597, 314, 38" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='input56' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='input56' tag='INPUT' type='password' class='password-with-toggle' aaname='What is your favorite piece of art? ' /&gt;" Guid="396f8f3e-cd7d-49b1-97c7-3c6bb175c9b1" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dominium - Prod - Sign In' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="4b1f8df6-761d-43be-bb5e-f8b3b2eaa5a6" CvTextArea="805, 574, 230, 13" CvTextArgument="What is your favorite piece of art?" CvType="Text" DesignTimeRectangle="806, 572, 232, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='What is your favorite piece of art? ' check:innerText='What is your favorite piece of art?' /&gt;" Guid="d2e705d6-7d5f-4958-a7ae-f2ca0396254a" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="e7c47000594dfb10b22e0e853259de6e.png" xmlns="">0dISGfsi7lkG7Ur93SOW9-w</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

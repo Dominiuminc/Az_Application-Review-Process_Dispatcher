@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="3LEBaVh2qEqo_Ahz8-pfZA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://dominium.certenant.com/#/" CVScreenId="b9902ef2-31ed-4e5a-8ddb-c707d751c9a2" CvElementArea="668, 289, 578, 44" CvType="InputBox" DesignTimeRectangle="700, 301, 137, 21" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Sign in with YardiOne' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' class='' /&gt;" Guid="ca7b8d0f-ef0c-4388-92d0-1076e85bdc3e" ImageBase64="" ScopeSelectorArgument="&lt;html app='msedge.exe' title='RightSource' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="f1289016bd6911dbdf4a6ebdc6411ebc.png" xmlns="">0xcuGxyuDN0uJpPAWKz3WKw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

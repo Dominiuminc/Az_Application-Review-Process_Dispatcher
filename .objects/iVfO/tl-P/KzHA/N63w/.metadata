@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Click 'Next'",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "N63wqxUy0kK8CCnzje1y4A",
+  "Reference": "N1pVCWfJn0a95dtdHAvGAw/N63wqxUy0kK8CCnzje1y4A",
+  "ParentRef": "N1pVCWfJn0a95dtdHAvGAw/KzHAPmUNKU6K2oV8ymoyCg",
+  "Created": "2025-08-14T15:37:26.8649437Z",
+  "Updated": "2025-08-14T15:37:26.8649437Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

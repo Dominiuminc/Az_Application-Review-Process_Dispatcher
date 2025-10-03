@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Bv-Pp9hxfkO2R4gTBp9U4A" Reference="N1pVCWfJn0a95dtdHAvGAw/9f96nd4KzUaHi7WcL1icLg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://dominium.certenant.com/#/dashboard/2/" CVScreenId="96b1bbbb-5c31-495e-9cc6-8a17bfae36ea" CvTextArea="903, 296, 41, 13" CvTextArgument="Details" CvType="Text" DesignTimeRectangle="892, 281, 64, 46" DesignTimeScaleFactor="1" FullSelectorArgument="[&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='text-right' tableRow='&quot;+str_Index.ToString+&quot;' tag='TD' /&gt;&quot;]" FuzzySelectorArgument="[&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='text-right' tableRow='&quot;+str_Index.ToString+&quot;' tag='TD' innertext='Details' tableCol='6' check:innerText='Details' /&gt;&quot;]" Guid="3634127b-ebc4-4181-81b8-eed03600475b" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dashboard - Auditor' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="aa4de043f4f8860dbe0564caf2fbdb61.png" xmlns="">0RrXK2PeG7kO1ukPpD3wxaw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
