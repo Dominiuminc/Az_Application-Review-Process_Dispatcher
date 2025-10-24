@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>901,997</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>917,1393</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -103,9 +103,15 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="512,932" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="512,1328" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -113,14 +119,41 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
-    <Sequence DisplayName="GetMatrixFile" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_10">
+    <Sequence DisplayName="GetMatrixFile" sap:VirtualizedContainerService.HintSize="450,453" sap2010:WorkflowViewState.IdRef="Sequence_10">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ucas:DownloadStorageFile TimeoutMS="{x:Null}" Destination="Data\Input\Manager Matrix.xlsx" DisplayName="Download Storage File" sap:VirtualizedContainerService.HintSize="388,165" sap2010:WorkflowViewState.IdRef="DownloadStorageFile_1" Path="Manager Matrix.xlsx" StorageBucketName="InputFiles" />
+      <If Condition="[path.Exists(&quot;Data\Input\Manager Matrix.xlsx&quot;)]" DisplayName="If-MatrixFileExists" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="If_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If.Then>
+          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,191" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="354,103" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="Data\Input\Manager Matrix.xlsx" />
+          </Sequence>
+        </If.Else>
+      </If>
+      <ucas:DownloadStorageFile TimeoutMS="{x:Null}" Destination="Data\Input\Manager Matrix.xlsx" DisplayName="Download Storage File" sap:VirtualizedContainerService.HintSize="388,165" sap2010:WorkflowViewState.IdRef="DownloadStorageFile_1" Path="Manager Matrix.xlsx" StorageBucketName="[in_Config(&quot;InputFilesStorageBucketName&quot;).ToString]" />
       <ui:ReadRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[out_DtManagerMatrix]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="388,111" sap2010:WorkflowViewState.IdRef="ReadRange_2" Range="A1" SheetName="Sheet1" WorkbookPath="Data\Input\Manager Matrix.xlsx" />
     </Sequence>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Yardi_Login - Invoke Workflow File (Yardi_Login.xaml)" sap:VirtualizedContainerService.HintSize="450,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Yardi\Yardi_Login.xaml">

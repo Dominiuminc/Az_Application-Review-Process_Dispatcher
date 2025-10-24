@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1082,2552</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>917,2352</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>EmailNotification_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -128,9 +128,10 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="EmailNotification" sap:VirtualizedContainerService.HintSize="512,2487" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="EmailNotification" sap:VirtualizedContainerService.HintSize="512,2287" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -140,9 +141,9 @@
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Subject: &quot;+in_Subject]" />
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Email recipients: &quot;+in_EmailRecipients]" />
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Email Body: &quot;+in_EmailBody]" />
-    <If Condition="[in_AttachmentExists]" sap:VirtualizedContainerService.HintSize="450,1543" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[in_AttachmentExists]" sap:VirtualizedContainerService.HintSize="450,1343" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,760" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,660" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="upr:ILocalResource" Name="AttachmentResource" />
           </Sequence.Variables>
@@ -152,7 +153,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:PathExists Exists="{x:Null}" DisplayName="Path Exists" sap:VirtualizedContainerService.HintSize="354,147" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[in_Attachment]" PathType="File" Resource="[AttachmentResource]" />
-          <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentList="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Mailbox="{x:Null}" MailboxBackup="{x:Reference __ReferenceID0}" ReplyTo="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Existing" Attachments="[{AttachmentResource}]" AuthScopesInvalid="False" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;in_EmailBody&lt;/SPAN&gt;&lt;/P&gt;&quot;)]" ConnectionId="9379d57d-9a28-4326-8555-b514ee655822" DisplayName="Send Email With Attachment" sap:VirtualizedContainerService.HintSize="354,525" sap2010:WorkflowViewState.IdRef="SendMailConnections_2" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="[in_Subject]" To="[in_EmailRecipients.Split(&quot;,&quot;c).AsEnumerable()]" UseConnectionService="True" UseSharedMailbox="False">
+          <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentList="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Mailbox="{x:Null}" MailboxBackup="{x:Reference __ReferenceID0}" ReplyTo="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Existing" Attachments="[{AttachmentResource}]" AuthScopesInvalid="False" Body="[in_EmailBody]" ConnectionId="7aea9608-410a-44ee-b558-6605be86360b" DisplayName="Send Email With Attachment" sap:VirtualizedContainerService.HintSize="354,425" sap2010:WorkflowViewState.IdRef="SendMailConnections_2" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="[in_Subject]" To="[in_EmailRecipients.Split(&quot;,&quot;c).AsEnumerable()]" UseConnectionService="True" UseSharedMailbox="False">
             <umam:SendMailConnections.AttachmentsBackup>
               <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="Existing">
                 <usau:BackupSlot.BackupValues>
@@ -182,13 +183,13 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,613" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,513" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentList="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Mailbox="{x:Null}" MailboxBackup="{x:Reference __ReferenceID1}" ReplyTo="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Existing" AuthScopesInvalid="False" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;in_EmailBody&lt;/SPAN&gt;&lt;/P&gt;&quot;)]" ConnectionId="9379d57d-9a28-4326-8555-b514ee655822" DisplayName="Send Email Without Attachment" sap:VirtualizedContainerService.HintSize="354,525" sap2010:WorkflowViewState.IdRef="SendMailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="[in_Subject]" To="[in_EmailRecipients.Split(&quot;,&quot;c).AsEnumerable()]" UseConnectionService="True" UseSharedMailbox="False">
+          <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentList="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Mailbox="{x:Null}" MailboxBackup="{x:Reference __ReferenceID1}" ReplyTo="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Existing" AuthScopesInvalid="False" Body="[in_EmailBody]" ConnectionId="7aea9608-410a-44ee-b558-6605be86360b" DisplayName="Send Email Without Attachment" sap:VirtualizedContainerService.HintSize="354,425" sap2010:WorkflowViewState.IdRef="SendMailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="[in_Subject]" To="[in_EmailRecipients.Split(&quot;,&quot;c).AsEnumerable()]" UseConnectionService="True" UseSharedMailbox="False">
             <umam:SendMailConnections.AttachmentsBackup>
               <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="Existing">
                 <usau:BackupSlot.BackupValues>
@@ -199,7 +200,12 @@
             <umam:SendMailConnections.InputTypeBackup>
               <usau:BackupSlot x:TypeArguments="umame:BodyInputType" StoredValue="HTML">
                 <usau:BackupSlot.BackupValues>
-                  <scg:Dictionary x:TypeArguments="umame:BodyInputType, scg:List(x:Object)" />
+                  <scg:List x:TypeArguments="x:Object" x:Key="HTML" Capacity="1">
+                    <x:Null />
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:Object" x:Key="TEXT" Capacity="1">
+                    <x:Null />
+                  </scg:List>
                 </usau:BackupSlot.BackupValues>
               </usau:BackupSlot>
             </umam:SendMailConnections.InputTypeBackup>

@@ -1,0 +1,210 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TransactionItem&StateMachine_1",
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "TransactionField2&StateMachine_1",
+        "TransactionField1&StateMachine_1",
+        "TransactionID&StateMachine_1",
+        "dt_TransactionData&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1",
+        "dt_ManagerMatrix&StateMachine_1",
+        "ShouldStop&Sequence_25"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_OrchestratorQueueName",
+        "in_OrchestratorQueueFolder"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "out_DtCaseData",
+        "out_DtManagerMatrix"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Yardi/Yardi_Login.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_TermsAndConditions&Sequence_2",
+        "str_Username&Sequence_2",
+        "sstr_Password&Sequence_2",
+        "str&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Yardi/GetApplicatioForReview.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "int_InitialRowIndex&Sequence_1",
+        "int_SkipFirstRows&Sequence_1",
+        "int_TitleColumnIndex&Sequence_1",
+        "int_DataCount&Sequence_2",
+        "int_Index&Sequence_2",
+        "int_Count&Sequence_2",
+        "str_CaseDetails&Sequence_3",
+        "str_Type&Sequence_3",
+        "str_Status&Sequence_3",
+        "str_State&Sequence_3",
+        "str_Reviewer&Sequence_3",
+        "str_Progress&Sequence_3",
+        "str_&Sequence_3",
+        "str_ReviewResults&Sequence_3",
+        "str_SubmissionType&Sequence_3",
+        "str_TextforUnit&Sequence_3",
+        "str_Unit&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_YardiURL",
+        "ExtractDataTable",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionItem",
+        "in_Config",
+        "in_DTManagetMatrix"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Yardi/AddCaseDetailsToQueue.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_Index&Sequence_1",
+        "str_Comments&Sequence_1",
+        "ExtractDataTable&Sequence_2",
+        "int_DataCount&Sequence_2",
+        "str_CaseDetails&Sequence_2",
+        "str_TextforUnit&Sequence_2",
+        "str_Type&Sequence_2",
+        "str_Status&Sequence_2",
+        "str_State&Sequence_2",
+        "str_Reviewer&Sequence_2",
+        "str_SubmissionType&Sequence_2",
+        "str_ReviewResults&Sequence_2",
+        "str_Unit&Sequence_2",
+        "str_PropertyName&Sequence_2",
+        "dt_ManagerData&Sequence_2",
+        "str_ManagerName&Sequence_2",
+        "str_DueDate&Sequence_2",
+        "str_CaseDetails&Sequence_3",
+        "str_Type&Sequence_3",
+        "str_Status&Sequence_3",
+        "str_State&Sequence_3",
+        "str_Reviewer&Sequence_3",
+        "str_Progress&Sequence_3",
+        "str_&Sequence_3",
+        "str_ReviewResults&Sequence_3",
+        "str_SubmissionType&Sequence_3",
+        "str_TextforUnit&Sequence_3",
+        "str_Unit&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_YardiURL",
+        "in_TransactionItem",
+        "in_DTManagetMatrix",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SetTransactionStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "QueueRetry&Sequence_17",
+        "ScreenshotPath&Sequence_17"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_BusinessException",
+        "in_TransactionField1",
+        "in_TransactionField2",
+        "in_TransactionID",
+        "in_SystemException",
+        "in_Config",
+        "in_TransactionItem",
+        "io_RetryNumber",
+        "io_TransactionNumber",
+        "io_ConsecutiveSystemExceptions"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "EmailNotification.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "AttachmentResource&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_EmailRecipients",
+        "in_Subject",
+        "in_EmailBody",
+        "in_AttachmentExists",
+        "in_Attachment"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/CloseAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Yardi/YardiLogout.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "int_DataCount&Sequence_2",
+        "int_Index&Sequence_2",
+        "int_Count&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_YardiURL"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
