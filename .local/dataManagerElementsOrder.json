@@ -106,6 +106,7 @@
       "Path": "Yardi/AddCaseDetailsToQueue.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "str_TextForPersonName&Sequence_2",
         "str_Index&Sequence_1",
         "str_Comments&Sequence_1",
         "ExtractDataTable&Sequence_2",
@@ -202,6 +203,42 @@
       ],
       "ArgumentsSectionElementsOrder": [
         "in_YardiURL"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Tests/Testing.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_TextforUnit&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Tests/TestPersonName.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_ExText&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/GetTransactionData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionNumber",
+        "in_Config",
+        "out_TransactionItem",
+        "out_TransactionField1",
+        "out_TransactionField2",
+        "out_TransactionID",
+        "io_dt_TransactionData"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
