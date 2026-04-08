@@ -106,6 +106,8 @@
       "Path": "Yardi/AddCaseDetailsToQueue.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "str_LastUploadDate&Sequence_2",
+        "str_LastUploadDateWithNumerics&Sequence_2",
         "str_TextForPersonName&Sequence_2",
         "str_Index&Sequence_1",
         "str_Comments&Sequence_1",
@@ -123,18 +125,7 @@
         "str_PropertyName&Sequence_2",
         "dt_ManagerData&Sequence_2",
         "str_ManagerName&Sequence_2",
-        "str_DueDate&Sequence_2",
-        "str_CaseDetails&Sequence_3",
-        "str_Type&Sequence_3",
-        "str_Status&Sequence_3",
-        "str_State&Sequence_3",
-        "str_Reviewer&Sequence_3",
-        "str_Progress&Sequence_3",
-        "str_&Sequence_3",
-        "str_ReviewResults&Sequence_3",
-        "str_SubmissionType&Sequence_3",
-        "str_TextforUnit&Sequence_3",
-        "str_Unit&Sequence_3"
+        "str_DueDate&Sequence_2"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_YardiURL",
@@ -240,6 +231,14 @@
         "out_TransactionID",
         "io_dt_TransactionData"
       ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Sequence.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }
