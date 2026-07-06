@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2980,5336</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2980,5765</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Yardi_Login_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -120,7 +120,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Yardi_Login" sap:VirtualizedContainerService.HintSize="2990,5271" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Yardi_Login" sap:VirtualizedContainerService.HintSize="2990,5700" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -128,7 +128,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="2928,173" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;Yardi_Login.xaml is Started&quot;]" />
-    <TryCatch DisplayName="Try Catch-Login-YardiRightSource" sap:VirtualizedContainerService.HintSize="2928,4846" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch DisplayName="Try Catch-Login-YardiRightSource" sap:VirtualizedContainerService.HintSize="2928,5275" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -136,17 +136,17 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <ui:RetryScope DisplayName="Retry Scope-YardiLogin" sap:VirtualizedContainerService.HintSize="2890,4344" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="[New TimeSpan(0, 0, 5)]">
+        <ui:RetryScope DisplayName="Retry Scope-YardiLogin" sap:VirtualizedContainerService.HintSize="2890,4773" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="[New TimeSpan(0, 0, 5)]">
           <ui:RetryScope.ActivityBody>
             <ActivityAction>
-              <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="2848,4169" sap2010:WorkflowViewState.IdRef="Sequence_14">
+              <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="2848,4598" sap2010:WorkflowViewState.IdRef="Sequence_14">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <TryCatch DisplayName="Try Catch-LoginToYardiRightSource" sap:VirtualizedContainerService.HintSize="2786,4081" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                <TryCatch DisplayName="Try Catch-LoginToYardiRightSource" sap:VirtualizedContainerService.HintSize="2786,4510" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -154,13 +154,13 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <TryCatch.Try>
-                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge RightSource(1)" sap:VirtualizedContainerService.HintSize="2748,3485" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="2520956b-a72b-4fea-a4a6-d9383dc62abe" Version="V2" WindowResize="Maximize">
+                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge RightSource(1)" sap:VirtualizedContainerService.HintSize="2748,3914" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="2520956b-a72b-4fea-a4a6-d9383dc62abe" Version="V2" WindowResize="Maximize">
                       <uix:NApplicationCard.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="2714,3268" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="2714,3697" sap2010:WorkflowViewState.IdRef="Sequence_2">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Name="str_TermsAndConditions" />
                               <Variable x:TypeArguments="x:String" Name="str_Username" />
@@ -200,9 +200,9 @@
                                 <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/" CVScreenId="b9902ef2-31ed-4e5a-8ddb-c707d751c9a2" ContentHash="3LEBaVh2qEqo_Ahz8-pfZA" CvElementArea="668, 289, 578, 44" CvType="InputBox" DesignTimeRectangle="700, 301, 137, 21" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Sign in with YardiOne' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' class='' /&gt;" Guid="ca7b8d0f-ef0c-4388-92d0-1076e85bdc3e" ImageBase64="" InformativeScreenshot="f1289016bd6911dbdf4a6ebdc6411ebc.png" Reference="N1pVCWfJn0a95dtdHAvGAw/mFR_jQk0dkCW38Q-88Bt9Q" ScopeSelectorArgument="&lt;html app='msedge.exe' title='RightSource' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                               </uix:NCheckState.Target>
                             </uix:NCheckState>
-                            <uix:NCheckState DisplayName="Check App State 'okta'" sap:VirtualizedContainerService.HintSize="2652,2157" sap2010:WorkflowViewState.IdRef="NCheckState_7" ScopeIdentifier="2520956b-a72b-4fea-a4a6-d9383dc62abe" Version="V3">
+                            <uix:NCheckState DisplayName="Check App State 'okta'" sap:VirtualizedContainerService.HintSize="2652,2586" sap2010:WorkflowViewState.IdRef="NCheckState_7" ScopeIdentifier="2520956b-a72b-4fea-a4a6-d9383dc62abe" Version="V3">
                               <uix:NCheckState.IfExists>
-                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="2148,1908" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="2148,2337" sap2010:WorkflowViewState.IdRef="Sequence_18">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -213,17 +213,17 @@
                                       <uix:TargetAnchorable BrowserURL="https://dominium31024.yardione.com/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fstate%3Dbd3e6fd3307216e19906082e0e5e8679%26scope%3Dopenid%2520profile%26response_type%3Dcode%26approval_prompt%3Dauto%26redirect_uri%3Dhttps%253A%252F%252Fdominium.certenant.com%252Fauth%252Fyardione%252Fcallback%26client_id%3Ddominium31024_rightsource" CVScreenId="314983b9-9fc4-461e-a232-39a0cc18aecc" ContentHash="xRi6EWZV8UiMs7zbKLgvGw" CvElementArea="782, 266, 362, 58" CvTextArea="943, 288, 40, 12" CvTextArgument="OKTA" CvType="Button" DesignTimeRectangle="784, 269, 360, 50" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='                             okta                         ' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                             okta                         ' tag='A' type='' class='btn btn-primary btn-block btn-shadow mb-4' check:innerText='OKTA' /&gt;" Guid="ca5792e6-5f5e-4bd9-a1da-808b812ba50b" InformativeScreenshot="04b7c13b94a893f712cae1937273dbef.png" Reference="N1pVCWfJn0a95dtdHAvGAw/ZPcLBYthjkyUwne6edVbsQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='YardiOne Dashboard' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                                     </uix:NClick.Target>
                                   </uix:NClick>
-                                  <uix:NCheckState DisplayName="Check App State 'Click 'Verify''" sap:VirtualizedContainerService.HintSize="2086,1138" sap2010:WorkflowViewState.IdRef="NCheckState_10" ScopeIdentifier="2520956b-a72b-4fea-a4a6-d9383dc62abe" Timeout="5" Version="V3">
+                                  <uix:NCheckState DisplayName="Check App State 'Click 'Verify''" sap:VirtualizedContainerService.HintSize="2086,1567" sap2010:WorkflowViewState.IdRef="NCheckState_10" ScopeIdentifier="2520956b-a72b-4fea-a4a6-d9383dc62abe" Timeout="5" Version="V3">
                                     <uix:NCheckState.IfExists>
-                                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="1016,889" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="1582,1278" sap2010:WorkflowViewState.IdRef="Sequence_29">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <uix:NCheckState DisplayName="Check App State 'Verify with'" sap:VirtualizedContainerService.HintSize="954,799" sap2010:WorkflowViewState.IdRef="NCheckState_12" ScopeIdentifier="2520956b-a72b-4fea-a4a6-d9383dc62abe" Version="V3">
+                                        <uix:NCheckState DisplayName="Check App State 'Verify with'" sap:VirtualizedContainerService.HintSize="1520,1188" sap2010:WorkflowViewState.IdRef="NCheckState_12" ScopeIdentifier="2520956b-a72b-4fea-a4a6-d9383dc62abe" Version="V3">
                                           <uix:NCheckState.IfExists>
-                                            <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,557" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                            <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="1016,946" sap2010:WorkflowViewState.IdRef="Sequence_25">
                                               <Sequence.Variables>
                                                 <Variable x:TypeArguments="x:String" Name="str_SecurityQuestion" />
                                                 <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="dict_SecQstns" />
@@ -234,12 +234,12 @@
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <uix:NGetText DisplayName="Get Text 'What is'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="2520956b-a72b-4fea-a4a6-d9383dc62abe" TextString="[str_SecurityQuestion]" Version="V3">
+                                              <uix:NGetText DisplayName="Get Text 'What is'" sap:VirtualizedContainerService.HintSize="954,189" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="2520956b-a72b-4fea-a4a6-d9383dc62abe" TextString="[str_SecurityQuestion]" Version="V3">
                                                 <uix:NGetText.Target>
                                                   <uix:TargetAnchorable BrowserURL="https://dominiuminc.okta.com/login/agentlessDsso/auth" DesignTimeRectangle="806, 578, 273, 17" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' aaname='What is* ' innertext='What is*' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' /&gt;" Guid="546f3336-3f27-4319-8945-0d1c6577e455" ImageBase64="" InformativeScreenshot="20bd6819cdc3ccbec1c1946054595ea8.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dominium *' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
                                                 </uix:NGetText.Target>
                                               </uix:NGetText>
-                                              <ui:LogMessage DisplayName="Log Message-SecurityQuestion" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;Security Question: &quot;+str_SecurityQuestion]">
+                                              <ui:LogMessage DisplayName="Log Message-SecurityQuestion" sap:VirtualizedContainerService.HintSize="954,57" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;Security Question: &quot;+str_SecurityQuestion]">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -247,7 +247,7 @@
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </ui:LogMessage>
-                                              <Assign DisplayName="Assign-dict_SecQstns" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                              <Assign DisplayName="Assign-dict_SecQstns" sap:VirtualizedContainerService.HintSize="954,57" sap2010:WorkflowViewState.IdRef="Assign_3">
                                                 <Assign.To>
                                                   <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[dict_SecQstns]</OutArgument>
                                                 </Assign.To>
@@ -263,7 +263,7 @@
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </Assign>
-                                              <ui:LogMessage DisplayName="Log Message-Security Answer" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="LogMessage_8" Message="[&quot;Security Answer: &quot;+dict_SecQstns(str_SecurityQuestion).Trim]">
+                                              <ui:LogMessage DisplayName="Log Message-Security Answer" sap:VirtualizedContainerService.HintSize="954,57" sap2010:WorkflowViewState.IdRef="LogMessage_8" Message="[&quot;Security Answer: &quot;+dict_SecQstns(str_SecurityQuestion).Trim]">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -271,7 +271,7 @@
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </ui:LogMessage>
-                                              <Assign DisplayName="Assign-str_SecurityAnswer" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                              <Assign DisplayName="Assign-str_SecurityAnswer" sap:VirtualizedContainerService.HintSize="954,57" sap2010:WorkflowViewState.IdRef="Assign_4">
                                                 <Assign.To>
                                                   <OutArgument x:TypeArguments="x:String">[str_SecurityAnswer]</OutArgument>
                                                 </Assign.To>
@@ -285,7 +285,7 @@
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </Assign>
-                                              <uix:NCheckState DisplayName="Check App State 'Type Into 'What is''" sap:VirtualizedContainerService.HintSize="388,50" sap2010:WorkflowViewState.IdRef="NCheckState_11" ScopeIdentifier="2520956b-a72b-4fea-a4a6-d9383dc62abe" Timeout="3" Version="V3">
+                                              <uix:NCheckState DisplayName="Check App State 'Type Into 'What is''" sap:VirtualizedContainerService.HintSize="954,439" sap2010:WorkflowViewState.IdRef="NCheckState_11" ScopeIdentifier="2520956b-a72b-4fea-a4a6-d9383dc62abe" Timeout="3" Version="V3">
                                                 <uix:NCheckState.IfExists>
                                                   <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,197" sap2010:WorkflowViewState.IdRef="Sequence_26">
                                                     <sap:WorkflowViewStateService.ViewState>
@@ -295,10 +295,10 @@
                                                     </sap:WorkflowViewStateService.ViewState>
                                                     <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Type Into 'What is''" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="2520956b-a72b-4fea-a4a6-d9383dc62abe" Text="[str_SecurityAnswer]" Version="V3">
                                                       <uix:NTypeInto.Target>
-                                                        <uix:TargetAnchorable BrowserURL="https://dominiuminc.okta.com/login/agentlessDsso/idx?stateToken=ckVsbFdINnI0aTRmWTRoVE1tamdFMmhaUFRxM3c1VGNES21pWXZTZ1JXdldNbERsYzMwZVJiWmZiWTRjL2dzMQ&amp;precheckFailure=true&amp;redirectFromAdsso=true" ContentHash="s3VZT3RFJEqpofFF_Ylmww" DesignTimeRectangle="807, 597, 314, 38" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='input56' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='input56' tag='INPUT' type='password' class='password-with-toggle' aaname='What is your favorite piece of art? ' /&gt;" Guid="396f8f3e-cd7d-49b1-97c7-3c6bb175c9b1" InformativeScreenshot="e7c47000594dfb10b22e0e853259de6e.png" Reference="N1pVCWfJn0a95dtdHAvGAw/Pbb_qYPTfEq5zEJRoVR5uw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dominium - Prod - Sign In' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                                                        <uix:TargetAnchorable BrowserURL="https://dominiuminc.okta.com/login/agentlessDsso/idx?stateToken=ckVsbFdINnI0aTRmWTRoVE1tamdFMmhaUFRxM3c1VGNES21pWXZTZ1JXdldNbERsYzMwZVJiWmZiWTRjL2dzMQ&amp;precheckFailure=true&amp;redirectFromAdsso=true" ContentHash="pFGIkga27k2S1XBlejGZdg" DesignTimeRectangle="807, 603, 314, 38" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='input56' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='input*' tag='INPUT' type='password' class='password-with-toggle' aaname='What * ' /&gt;" Guid="396f8f3e-cd7d-49b1-97c7-3c6bb175c9b1" ImageBase64="" InformativeScreenshot="986d7183844e71d2f660d9085b6853a5.png" Reference="N1pVCWfJn0a95dtdHAvGAw/Pbb_qYPTfEq5zEJRoVR5uw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dominium - Prod - Sign In' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
                                                           <uix:TargetAnchorable.Anchors>
                                                             <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                              <uix:Target CVScreenId="4b1f8df6-761d-43be-bb5e-f8b3b2eaa5a6" CvTextArea="805, 574, 230, 13" CvTextArgument="What is your favorite piece of art?" CvType="Text" DesignTimeRectangle="806, 572, 232, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='What is your favorite piece of art? ' check:innerText='What is your favorite piece of art?' /&gt;" Guid="d2e705d6-7d5f-4958-a7ae-f2ca0396254a" SearchSteps="FuzzySelector, CV" />
+                                                              <uix:Target CVScreenId="4b1f8df6-761d-43be-bb5e-f8b3b2eaa5a6" CvTextArea="805, 574, 230, 13" CvTextArgument="What is your favorite piece of art?" CvType="Text" DesignTimeRectangle="806, 578, 273, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='What is *' /&gt;" Guid="d2e705d6-7d5f-4958-a7ae-f2ca0396254a" ImageBase64="" SearchSteps="FuzzySelector" />
                                                             </scg:List>
                                                           </uix:TargetAnchorable.Anchors>
                                                         </uix:TargetAnchorable>
@@ -312,7 +312,7 @@
                                                     </uix:NTypeInto>
                                                     <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Click 'Verify''" sap:VirtualizedContainerService.HintSize="388,50" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2520956b-a72b-4fea-a4a6-d9383dc62abe" Version="V3">
                                                       <uix:NClick.Target>
-                                                        <uix:TargetAnchorable BrowserURL="https://dominiuminc.okta.com/login/agentlessDsso/idx?stateToken=ckVsbFdINnI0aTRmWTRoVE1tamdFMmhaUFRxM3c1VGNES21pWXZTZ1JXdldNbERsYzMwZVJiWmZiWTRjL2dzMQ&amp;precheckFailure=true&amp;redirectFromAdsso=true" CVScreenId="6c2d21f5-8d3d-44dc-9bcf-a126b9f1bd3d" ContentHash="VBiICtJTb0mesHTLlAjx3g" CvElementArea="805, 663, 319, 52" CvTextArea="943, 681, 41, 17" CvTextArgument="Verify" CvType="Button" DesignTimeRectangle="806, 664, 316, 50" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='button button-primary' aaname='Verify' check:text='Verify' /&gt;" Guid="f88205cd-6c16-4b34-9da9-d6100b9ca556" InformativeScreenshot="80ff57cefa6e124ec3e81541acf90b31.png" Reference="N1pVCWfJn0a95dtdHAvGAw/YlqAPR-jAEmhYWjcNq71Ew" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dominium - Prod - Sign In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                                                        <uix:TargetAnchorable BrowserURL="https://dominiuminc.okta.com/login/agentlessDsso/idx?stateToken=ckVsbFdINnI0aTRmWTRoVE1tamdFMmhaUFRxM3c1VGNES21pWXZTZ1JXdldNbERsYzMwZVJiWmZiWTRjL2dzMQ&amp;precheckFailure=true&amp;redirectFromAdsso=true" CVScreenId="6c2d21f5-8d3d-44dc-9bcf-a126b9f1bd3d" ContentHash="s8pSrAsyu0uavmLX5Iq5AQ" CvElementArea="805, 663, 319, 52" CvTextArea="943, 681, 41, 17" CvTextArgument="Verify" CvType="Button" DesignTimeRectangle="806, 670, 316, 50" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='button button-primary' aaname='Verify' check:text='Verify' /&gt;" Guid="f88205cd-6c16-4b34-9da9-d6100b9ca556" InformativeScreenshot="962a1dea0409511d9f637ad00a569f2b.png" Reference="N1pVCWfJn0a95dtdHAvGAw/YlqAPR-jAEmhYWjcNq71Ew" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dominium - Prod - Sign In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                                                       </uix:NClick.Target>
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -333,18 +333,18 @@
                                                   </Sequence>
                                                 </uix:NCheckState.IfNotExists>
                                                 <uix:NCheckState.Target>
-                                                  <uix:TargetAnchorable BrowserURL="https://dominiuminc.okta.com/login/agentlessDsso/idx?stateToken=ckVsbFdINnI0aTRmWTRoVE1tamdFMmhaUFRxM3c1VGNES21pWXZTZ1JXdldNbERsYzMwZVJiWmZiWTRjL2dzMQ&amp;precheckFailure=true&amp;redirectFromAdsso=true" ContentHash="s3VZT3RFJEqpofFF_Ylmww" DesignTimeRectangle="807, 597, 314, 38" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='input56' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='input56' tag='INPUT' type='password' class='password-with-toggle' aaname='What is your favorite piece of art? ' /&gt;" Guid="396f8f3e-cd7d-49b1-97c7-3c6bb175c9b1" InformativeScreenshot="e7c47000594dfb10b22e0e853259de6e.png" Reference="N1pVCWfJn0a95dtdHAvGAw/Pbb_qYPTfEq5zEJRoVR5uw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dominium - Prod - Sign In' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                                                  <uix:TargetAnchorable BrowserURL="https://dominiuminc.okta.com/login/agentlessDsso/idx?stateToken=ckVsbFdINnI0aTRmWTRoVE1tamdFMmhaUFRxM3c1VGNES21pWXZTZ1JXdldNbERsYzMwZVJiWmZiWTRjL2dzMQ&amp;precheckFailure=true&amp;redirectFromAdsso=true" ContentHash="pFGIkga27k2S1XBlejGZdg" DesignTimeRectangle="807, 603, 314, 38" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='input56' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='input*' tag='INPUT' type='password' class='password-with-toggle' aaname='What * ' /&gt;" Guid="396f8f3e-cd7d-49b1-97c7-3c6bb175c9b1" ImageBase64="" InformativeScreenshot="986d7183844e71d2f660d9085b6853a5.png" Reference="N1pVCWfJn0a95dtdHAvGAw/Pbb_qYPTfEq5zEJRoVR5uw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dominium - Prod - Sign In' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
                                                     <uix:TargetAnchorable.Anchors>
                                                       <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                        <uix:Target CVScreenId="4b1f8df6-761d-43be-bb5e-f8b3b2eaa5a6" CvTextArea="805, 574, 230, 13" CvTextArgument="What is your favorite piece of art?" CvType="Text" DesignTimeRectangle="806, 572, 232, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='What is your favorite piece of art? ' check:innerText='What is your favorite piece of art?' /&gt;" Guid="d2e705d6-7d5f-4958-a7ae-f2ca0396254a" SearchSteps="FuzzySelector, CV" />
+                                                        <uix:Target CVScreenId="4b1f8df6-761d-43be-bb5e-f8b3b2eaa5a6" CvTextArea="805, 574, 230, 13" CvTextArgument="What is your favorite piece of art?" CvType="Text" DesignTimeRectangle="806, 578, 273, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='What is *' /&gt;" Guid="d2e705d6-7d5f-4958-a7ae-f2ca0396254a" ImageBase64="" SearchSteps="FuzzySelector" />
                                                       </scg:List>
                                                     </uix:TargetAnchorable.Anchors>
                                                   </uix:TargetAnchorable>
                                                 </uix:NCheckState.Target>
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </uix:NCheckState>
@@ -386,7 +386,7 @@
                                       </Sequence>
                                     </uix:NCheckState.IfNotExists>
                                     <uix:NCheckState.Target>
-                                      <uix:TargetAnchorable BrowserURL="https://dominiuminc.okta.com/login/agentlessDsso/idx?stateToken=ckVsbFdINnI0aTRmWTRoVE1tamdFMmhaUFRxM3c1VGNES21pWXZTZ1JXdldNbERsYzMwZVJiWmZiWTRjL2dzMQ&amp;precheckFailure=true&amp;redirectFromAdsso=true" CVScreenId="6c2d21f5-8d3d-44dc-9bcf-a126b9f1bd3d" ContentHash="VBiICtJTb0mesHTLlAjx3g" CvElementArea="805, 663, 319, 52" CvTextArea="943, 681, 41, 17" CvTextArgument="Verify" CvType="Button" DesignTimeRectangle="806, 664, 316, 50" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='button button-primary' aaname='Verify' check:text='Verify' /&gt;" Guid="f88205cd-6c16-4b34-9da9-d6100b9ca556" InformativeScreenshot="80ff57cefa6e124ec3e81541acf90b31.png" Reference="N1pVCWfJn0a95dtdHAvGAw/YlqAPR-jAEmhYWjcNq71Ew" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dominium - Prod - Sign In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                                      <uix:TargetAnchorable BrowserURL="https://dominiuminc.okta.com/login/agentlessDsso/idx?stateToken=ckVsbFdINnI0aTRmWTRoVE1tamdFMmhaUFRxM3c1VGNES21pWXZTZ1JXdldNbERsYzMwZVJiWmZiWTRjL2dzMQ&amp;precheckFailure=true&amp;redirectFromAdsso=true" CVScreenId="6c2d21f5-8d3d-44dc-9bcf-a126b9f1bd3d" ContentHash="s8pSrAsyu0uavmLX5Iq5AQ" CvElementArea="805, 663, 319, 52" CvTextArea="943, 681, 41, 17" CvTextArgument="Verify" CvType="Button" DesignTimeRectangle="806, 670, 316, 50" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='button button-primary' aaname='Verify' check:text='Verify' /&gt;" Guid="f88205cd-6c16-4b34-9da9-d6100b9ca556" InformativeScreenshot="962a1dea0409511d9f637ad00a569f2b.png" Reference="N1pVCWfJn0a95dtdHAvGAw/YlqAPR-jAEmhYWjcNq71Ew" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dominium - Prod - Sign In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                                     </uix:NCheckState.Target>
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -613,7 +613,7 @@
                                       </Sequence>
                                     </uix:NCheckState.IfNotExists>
                                     <uix:NCheckState.Target>
-                                      <uix:TargetAnchorable BrowserURL="https://dominiuminc.okta.com/login/agentlessDsso/idx?stateToken=ckVsbFdINnI0aTRmWTRoVE1tamdFMmhaUFRxM3c1VGNES21pWXZTZ1JXdldNbERsYzMwZVJiWmZiWTRjL2dzMQ&amp;precheckFailure=true&amp;redirectFromAdsso=true" CVScreenId="6c2d21f5-8d3d-44dc-9bcf-a126b9f1bd3d" ContentHash="VBiICtJTb0mesHTLlAjx3g" CvElementArea="805, 663, 319, 52" CvTextArea="943, 681, 41, 17" CvTextArgument="Verify" CvType="Button" DesignTimeRectangle="806, 664, 316, 50" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='button button-primary' aaname='Verify' check:text='Verify' /&gt;" Guid="f88205cd-6c16-4b34-9da9-d6100b9ca556" InformativeScreenshot="80ff57cefa6e124ec3e81541acf90b31.png" Reference="N1pVCWfJn0a95dtdHAvGAw/YlqAPR-jAEmhYWjcNq71Ew" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dominium - Prod - Sign In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                                      <uix:TargetAnchorable BrowserURL="https://dominiuminc.okta.com/login/agentlessDsso/idx?stateToken=ckVsbFdINnI0aTRmWTRoVE1tamdFMmhaUFRxM3c1VGNES21pWXZTZ1JXdldNbERsYzMwZVJiWmZiWTRjL2dzMQ&amp;precheckFailure=true&amp;redirectFromAdsso=true" CVScreenId="6c2d21f5-8d3d-44dc-9bcf-a126b9f1bd3d" ContentHash="s8pSrAsyu0uavmLX5Iq5AQ" CvElementArea="805, 663, 319, 52" CvTextArea="943, 681, 41, 17" CvTextArgument="Verify" CvType="Button" DesignTimeRectangle="806, 670, 316, 50" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='button button-primary' aaname='Verify' check:text='Verify' /&gt;" Guid="f88205cd-6c16-4b34-9da9-d6100b9ca556" InformativeScreenshot="962a1dea0409511d9f637ad00a569f2b.png" Reference="N1pVCWfJn0a95dtdHAvGAw/YlqAPR-jAEmhYWjcNq71Ew" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dominium - Prod - Sign In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                                     </uix:NCheckState.Target>
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">

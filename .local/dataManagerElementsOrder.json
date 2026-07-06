@@ -49,6 +49,12 @@
       "Path": "Yardi/Yardi_Login.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "str_SecurityQuestion&Sequence_25",
+        "dict_SecQstns&Sequence_25",
+        "str_SecurityAnswer&Sequence_25",
+        "str_SecurityQuestion&Sequence_20",
+        "dict_SecQstns&Sequence_20",
+        "str_SecurityAnswer&Sequence_20",
         "str_TermsAndConditions&Sequence_2",
         "str_Username&Sequence_2",
         "sstr_Password&Sequence_2",
@@ -64,6 +70,7 @@
       "Path": "Yardi/GetApplicatioForReview.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "bool_DashboardExists&TryCatch_2",
         "int_InitialRowIndex&Sequence_1",
         "int_SkipFirstRows&Sequence_1",
         "int_TitleColumnIndex&Sequence_1",
