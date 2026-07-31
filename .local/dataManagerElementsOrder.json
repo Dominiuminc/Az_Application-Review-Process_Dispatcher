@@ -49,6 +49,12 @@
       "Path": "Yardi/Yardi_Login.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "str_SecurityQuestion&Sequence_25",
+        "dict_SecQstns&Sequence_25",
+        "str_SecurityAnswer&Sequence_25",
+        "str_SecurityQuestion&Sequence_20",
+        "dict_SecQstns&Sequence_20",
+        "str_SecurityAnswer&Sequence_20",
         "str_TermsAndConditions&Sequence_2",
         "str_Username&Sequence_2",
         "sstr_Password&Sequence_2",
@@ -64,6 +70,8 @@
       "Path": "Yardi/GetApplicatioForReview.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "arr_DashboardTitleFilters&Sequence_8",
+        "bool_DashboardExists&TryCatch_2",
         "int_InitialRowIndex&Sequence_1",
         "int_SkipFirstRows&Sequence_1",
         "int_TitleColumnIndex&Sequence_1",
@@ -106,6 +114,9 @@
       "Path": "Yardi/AddCaseDetailsToQueue.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "str_LastUploadDate&Sequence_2",
+        "str_LastUploadDateWithNumerics&Sequence_2",
+        "str_TextForPersonName&Sequence_2",
         "str_Index&Sequence_1",
         "str_Comments&Sequence_1",
         "ExtractDataTable&Sequence_2",
@@ -122,18 +133,7 @@
         "str_PropertyName&Sequence_2",
         "dt_ManagerData&Sequence_2",
         "str_ManagerName&Sequence_2",
-        "str_DueDate&Sequence_2",
-        "str_CaseDetails&Sequence_3",
-        "str_Type&Sequence_3",
-        "str_Status&Sequence_3",
-        "str_State&Sequence_3",
-        "str_Reviewer&Sequence_3",
-        "str_Progress&Sequence_3",
-        "str_&Sequence_3",
-        "str_ReviewResults&Sequence_3",
-        "str_SubmissionType&Sequence_3",
-        "str_TextforUnit&Sequence_3",
-        "str_Unit&Sequence_3"
+        "str_DueDate&Sequence_2"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_YardiURL",
@@ -202,6 +202,66 @@
       ],
       "ArgumentsSectionElementsOrder": [
         "in_YardiURL"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Tests/Testing.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_TextforUnit&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Tests/TestPersonName.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_ExText&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/GetTransactionData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionNumber",
+        "in_Config",
+        "out_TransactionItem",
+        "out_TransactionField1",
+        "out_TransactionField2",
+        "out_TransactionID",
+        "io_dt_TransactionData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Sequence.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllSettings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_SettingsAndConstants&Sequence_5",
+        "dt_Assets&Sequence_6",
+        "AssetValue&Sequence_11"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ConfigFile",
+        "in_ConfigSheets",
+        "out_Config"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

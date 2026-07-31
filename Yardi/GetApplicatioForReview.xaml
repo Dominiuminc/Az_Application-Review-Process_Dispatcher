@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1082,3551</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1012,3617</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetApplicatioForReview_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -55,6 +55,7 @@
       <x:String>UiPath.Platform.ResourceHandling</x:String>
       <x:String>UiPath.DataTableUtilities</x:String>
       <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -122,9 +123,14 @@
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
       <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetApplicatioForReview" sap:VirtualizedContainerService.HintSize="704,3486" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetApplicatioForReview" sap:VirtualizedContainerService.HintSize="846,3552" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="int_InitialRowIndex" />
       <Variable x:TypeArguments="x:Int32" Name="int_SkipFirstRows" />
@@ -135,8 +141,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="642,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;GetApplicationForReview is Started&quot;]" />
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="642,210" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="784,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;GetApplicationForReview is Started&quot;]" />
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="784,210" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
@@ -166,13 +172,13 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Dashboard - Auditor" sap:VirtualizedContainerService.HintSize="642,2851" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="d6dc13a4-65e9-416b-b52c-9907459ff280" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Dashboard - Auditor" sap:VirtualizedContainerService.HintSize="784,2917" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="d6dc13a4-65e9-416b-b52c-9907459ff280" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="608,2602" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="750,2668" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Int32" Name="int_DataCount" />
               <Variable x:TypeArguments="x:Int32" Name="int_Index" />
@@ -184,19 +190,25 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Dashboard'" sap:VirtualizedContainerService.HintSize="546,189" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d6dc13a4-65e9-416b-b52c-9907459ff280" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Dashboard'" sap:VirtualizedContainerService.HintSize="688,189" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d6dc13a4-65e9-416b-b52c-9907459ff280" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/dashboard/" CVScreenId="f41297a6-6b99-48a9-aea9-05587145a2b4" CvTextArea="1299, 97, 65, 13" CvTextArgument="Dashboard" CvType="Text" DesignTimeRectangle="1285, 82, 108, 45" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-role='button' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='A' type='' class='nav-link dropdown-toggle' aaname='Dashboard ' check:innerText='Dashboard' /&gt;" Guid="39bdf9af-dde1-4882-bff0-a1ddae9fd85b" InformativeScreenshot="27326518403aa666278a629193bdeea8.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dashboard - Auditor' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="546,417" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <TryCatch DisplayName="Try Catch-Reviewer" sap:VirtualizedContainerService.HintSize="688,57" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
               <TryCatch.Try>
-                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Auditor'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d6dc13a4-65e9-416b-b52c-9907459ff280" Timeout="5" Version="V3">
+                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Reviewer'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d6dc13a4-65e9-416b-b52c-9907459ff280" Version="V3">
                   <uix:NClick.Target>
-                    <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/dashboard/" DesignTimeRectangle="1181, 136, 211, 29" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Auditor' parentid='navbar' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Auditor' parentid='navbar' tag='A' type='' class='dropdown-item ng-binding' check:innerText='Auditor' /&gt;" Guid="ec935aa3-fe43-453c-a779-c98fe6a49e9e" InformativeScreenshot="eb1a00edf877b5303f9d1c3269c2a50d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dashboard - Auditor' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                    <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/dashboard/2/" CVScreenId="5c5e9e9c-e312-4cea-a102-07b02a732911" CvTextArea="1129, 172, 55, 13" CvTextArgument="Reviewer" CvType="Text" DesignTimeRectangle="1105, 165, 212, 29" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Reviewer' parentid='navbar' innertext='Reviewer' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Reviewer' parentid='navbar' innertext='Reviewer' tag='A' type='' class='dropdown-item ng-binding active' check:text='Reviewer' /&gt;" Guid="0868429c-ca94-4b06-9a0c-1ffd107bf14f" InformativeScreenshot="26b1631396afefcdd2b5393b6696fe60.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dashboard*' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
                       <uix:TargetAnchorable.Anchors>
                         <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                          <uix:Target CVScreenId="f41297a6-6b99-48a9-aea9-05587145a2b4" CvTextArea="1299, 97, 65, 13" CvTextArgument="Dashboard" CvType="Text" DesignTimeRectangle="1285, 82, 108, 45" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-role='button' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='A' type='' class='nav-link dropdown-toggle' aaname='Dashboard ' check:innerText='Dashboard' /&gt;" Guid="dce500a7-a078-4b46-b4e7-240bf7c9a393" SearchSteps="FuzzySelector, CV" />
+                          <uix:Target CVScreenId="ae2c96bf-83b7-4a91-a042-3700b5fc2606" CvElementArea="1290, 93, 18, 19" CvTextArea="1224, 97, 64, 13" CvTextArgument="Dashboard" CvType="ArrowButton" DesignTimeRectangle="1209, 82, 109, 45" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-role='button' innertext='Dashboard ' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='button' innertext='Dashboard ' tag='A' type='' class='nav-link dropdown-toggle' aaname='Dashboard ' check:text='Dashboard' /&gt;" Guid="9790352e-9d06-4016-bfb2-062cf00ed0fe" SearchSteps="FuzzySelector" />
                         </scg:List>
                       </uix:TargetAnchorable.Anchors>
                     </uix:TargetAnchorable>
@@ -204,7 +216,116 @@
                 </uix:NClick>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,227" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Auditor'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d6dc13a4-65e9-416b-b52c-9907459ff280" Timeout="5" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/dashboard/" DesignTimeRectangle="1181, 136, 211, 29" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Auditor' parentid='navbar' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Auditor' parentid='navbar' tag='A' type='' class='dropdown-item ng-binding' check:innerText='Auditor' /&gt;" Guid="ec935aa3-fe43-453c-a779-c98fe6a49e9e" InformativeScreenshot="eb1a00edf877b5303f9d1c3269c2a50d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dashboard - Auditor' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="f41297a6-6b99-48a9-aea9-05587145a2b4" CvTextArea="1299, 97, 65, 13" CvTextArgument="Dashboard" CvType="Text" DesignTimeRectangle="1285, 82, 108, 45" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-role='button' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='A' type='' class='nav-link dropdown-toggle' aaname='Dashboard ' check:innerText='Dashboard' /&gt;" Guid="dce500a7-a078-4b46-b4e7-240bf7c9a393" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
+            <TryCatch DisplayName="Try Catch-CheckDashboard&amp;ExtractDT" sap:VirtualizedContainerService.HintSize="688,57" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+              <TryCatch.Variables>
+                <Variable x:TypeArguments="x:Boolean" Default="False" Name="bool_DashboardExists" />
+              </TryCatch.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <TryCatch.Try>
+                <ui:RetryScope DisplayName="Retry Scope-CheckDashBoard" sap:VirtualizedContainerService.HintSize="458,356" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="[New TimeSpan(0, 0, 5)]">
+                  <ui:RetryScope.ActivityBody>
+                    <ActivityAction>
+                      <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NCheckState DisplayName="Check App State 'Certifications'" Exists="[bool_DashboardExists]" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="d6dc13a4-65e9-416b-b52c-9907459ff280" Timeout="15" Version="V3">
+                          <uix:NCheckState.IfExists>
+                            <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,140" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-0' ReferenceIdx='0' Name='Column-0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-1' ReferenceIdx='1' Name='Column-1'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-2' ReferenceIdx='2' Name='Column-2'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-3' ReferenceIdx='3' Name='Column-3'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-4' ReferenceIdx='4' Name='Column-4'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-4 Url' ReferenceIdx='5' Name='Column-4 Url'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-5' ReferenceIdx='6' Name='Column-5'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-5 Url' ReferenceIdx='7' Name='Column-5 Url'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Column-0' attr='fulltext' /&gt;&lt;column name='Column-1' attr='fulltext' /&gt;&lt;column name='Column-2' attr='fulltext' /&gt;&lt;column name='Column-3' attr='fulltext' /&gt;&lt;column name='Column-4' attr='fulltext' name2='Column-4 Url' attr2='href' /&gt;&lt;column name='Column-5' attr='fulltext' name2='Column-5 Url' attr2='href' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="388,50" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="d6dc13a4-65e9-416b-b52c-9907459ff280" Version="V3">
+                                <uix:NExtractData.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/dashboard/2/" DesignTimeRectangle="27, 347, 1393, 464" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="d2abb6b8-76de-49f5-9a3b-c1d7dea27bd3" InformativeScreenshot="b76dc684b3c1d556086f1a1b1defcb1b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dashboard - Auditor' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                </uix:NExtractData.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </uix:NExtractData>
+                            </Sequence>
+                          </uix:NCheckState.IfExists>
+                          <uix:NCheckState.IfNotExists>
+                            <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
+                          </uix:NCheckState.IfNotExists>
+                          <uix:NCheckState.Target>
+                            <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/dashboard/2/" CVScreenId="f6f0d1d5-cd47-41ab-8670-cf5ca4356560" CvTextArea="31, 246, 69, 12" CvTextArgument="Certifications" CvType="Text" DesignTimeRectangle="32, 246, 67, 14" DesignTimeScaleFactor="0.6666666865348816" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Certifications' innertext='Certifications' parentid='page-dashboard' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Certifications' innertext='Certifications' parentid='page-dashboard' tag='H4' type='' class='card-title font-weight-bold' check:text='Certifications' /&gt;" Guid="7469ab6b-c843-4d11-b2e7-21fd139b0aa2" InformativeScreenshot="5ae881ad63b69f9d0d4fcde2b469e122.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dashboard*' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target CVScreenId="f6f0d1d5-cd47-41ab-8670-cf5ca4356560" CvTextArea="21, 130, 92, 19" CvTextArgument="Dashboard" CvType="Text" DesignTimeRectangle="22, 128, 1884, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Dashboard' innertext='Dashboard' parentid='page-dashboard' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Dashboard' innertext='Dashboard' parentid='page-dashboard' tag='H1' type='' class='m-0' check:text='Dashboard' /&gt;" Guid="5fbf79f5-eca6-4bce-b234-a33af1b6d5c3" SearchSteps="FuzzySelector, CV" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NCheckState.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NCheckState>
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:RetryScope.ActivityBody>
+                  <ui:RetryScope.Condition>
+                    <ActivityFunc x:TypeArguments="x:Boolean">
+                      <ui:IsMatch DisplayName="Is Text Matching" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="IsMatch_1" Input="true" IsBuilderTabModified="False" Pattern="[bool_DashboardExists.ToString.ToLower]" RegexOption="IgnoreCase, Compiled" />
+                    </ActivityFunc>
+                  </ui:RetryScope.Condition>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:RetryScope>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="462,22" sap2010:WorkflowViewState.IdRef="Catch`1_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -215,27 +336,12 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                     </ActivityAction.Argument>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Reviewer'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d6dc13a4-65e9-416b-b52c-9907459ff280" Version="V3">
-                      <uix:NClick.Target>
-                        <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/dashboard/2/" CVScreenId="5c5e9e9c-e312-4cea-a102-07b02a732911" CvTextArea="1129, 172, 55, 13" CvTextArgument="Reviewer" CvType="Text" DesignTimeRectangle="1105, 165, 212, 29" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Reviewer' parentid='navbar' innertext='Reviewer' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Reviewer' parentid='navbar' innertext='Reviewer' tag='A' type='' class='dropdown-item ng-binding active' check:text='Reviewer' /&gt;" Guid="0868429c-ca94-4b06-9a0c-1ffd107bf14f" InformativeScreenshot="26b1631396afefcdd2b5393b6696fe60.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dashboard*' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
-                          <uix:TargetAnchorable.Anchors>
-                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                              <uix:Target CVScreenId="ae2c96bf-83b7-4a91-a042-3700b5fc2606" CvElementArea="1290, 93, 18, 19" CvTextArea="1224, 97, 64, 13" CvTextArgument="Dashboard" CvType="ArrowButton" DesignTimeRectangle="1209, 82, 109, 45" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-role='button' innertext='Dashboard ' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='button' innertext='Dashboard ' tag='A' type='' class='nav-link dropdown-toggle' aaname='Dashboard ' check:text='Dashboard' /&gt;" Guid="9790352e-9d06-4016-bfb2-062cf00ed0fe" SearchSteps="FuzzySelector" />
-                            </scg:List>
-                          </uix:TargetAnchorable.Anchors>
-                        </uix:TargetAnchorable>
-                      </uix:NClick.Target>
-                    </uix:NClick>
+                    <Throw Exception="[New SystemException(&quot;Dashborad to check Applications is not loaded&quot;)]" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Throw_1" />
                   </ActivityAction>
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-0' ReferenceIdx='0' Name='Column-0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-1' ReferenceIdx='1' Name='Column-1'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-2' ReferenceIdx='2' Name='Column-2'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-3' ReferenceIdx='3' Name='Column-3'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-4' ReferenceIdx='4' Name='Column-4'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-4 Url' ReferenceIdx='5' Name='Column-4 Url'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-5' ReferenceIdx='6' Name='Column-5'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-5 Url' ReferenceIdx='7' Name='Column-5 Url'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Column-0' attr='fulltext' /&gt;&lt;column name='Column-1' attr='fulltext' /&gt;&lt;column name='Column-2' attr='fulltext' /&gt;&lt;column name='Column-3' attr='fulltext' /&gt;&lt;column name='Column-4' attr='fulltext' name2='Column-4 Url' attr2='href' /&gt;&lt;column name='Column-5' attr='fulltext' name2='Column-5 Url' attr2='href' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="546,189" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="d6dc13a4-65e9-416b-b52c-9907459ff280" Version="V3">
-              <uix:NExtractData.Target>
-                <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/dashboard/2/" DesignTimeRectangle="27, 347, 1393, 464" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="d2abb6b8-76de-49f5-9a3b-c1d7dea27bd3" InformativeScreenshot="b76dc684b3c1d556086f1a1b1defcb1b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dashboard - Auditor' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
-              </uix:NExtractData.Target>
-            </uix:NExtractData>
-            <Assign sap:VirtualizedContainerService.HintSize="546,114" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign sap:VirtualizedContainerService.HintSize="688,114" sap2010:WorkflowViewState.IdRef="Assign_3">
               <Assign.To>
                 <OutArgument x:TypeArguments="sd:DataTable">[ExtractDataTable]</OutArgument>
               </Assign.To>
@@ -243,7 +349,7 @@
                 <InArgument x:TypeArguments="sd:DataTable">[ExtractDataTable.AsEnumerable.Skip(int_SkipFirstRows).CopyToDataTable]</InArgument>
               </Assign.Value>
             </Assign>
-            <If Condition="[ExtractDataTable.RowCount&gt;2]" DisplayName="If-DataExists" sap:VirtualizedContainerService.HintSize="546,1603" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[ExtractDataTable.RowCount&gt;2]" DisplayName="If-DataExists" sap:VirtualizedContainerService.HintSize="688,2161" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -251,21 +357,24 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,1247" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="654,1806" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Cases exist to process&quot;]" />
-                  <Sequence DisplayName="GetTheRecords" sap:VirtualizedContainerService.HintSize="450,984" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="592,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Cases exist to process&quot;]" />
+                  <Sequence DisplayName="GetTheRecords" sap:VirtualizedContainerService.HintSize="592,1543" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="s:String[]" Name="arr_DashboardTitleFilters" />
+                    </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="530,57" sap2010:WorkflowViewState.IdRef="CommentOut_3">
                       <ui:CommentOut.Body>
                         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_10">
                           <sap:WorkflowViewStateService.ViewState>
@@ -290,22 +399,22 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:CommentOut>
-                    <ui:RemoveDataColumn Column="{x:Null}" ColumnName="{x:Null}" ColumnIndex="7" DataTable="[ExtractDataTable]" DisplayName="Remove Data Column" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_4" />
-                    <ui:RemoveDataColumn Column="{x:Null}" ColumnName="{x:Null}" ColumnIndex="6" DataTable="[ExtractDataTable]" DisplayName="Remove Data Column" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_3" />
-                    <ui:AddDataColumn x:TypeArguments="x:Int32" AllowDBNull="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" AutoIncrement="True" ColumnName="RowIndex" DataTable="[ExtractDataTable]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2" />
-                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[int_Count]" DataTable="[ExtractDataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                    <ui:RemoveDataColumn Column="{x:Null}" ColumnName="{x:Null}" ColumnIndex="[CInt(in_Config(&quot;Yardi_ColumnToRemove&quot;).ToString)]" DataTable="[ExtractDataTable]" DisplayName="Remove Data Column" sap:VirtualizedContainerService.HintSize="530,218" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_4" />
+                    <ui:RemoveDataColumn Column="{x:Null}" ColumnName="{x:Null}" ColumnIndex="[CInt(in_Config(&quot;Yardi_ColumnToRemove&quot;).ToString)-1]" DataTable="[ExtractDataTable]" DisplayName="Remove Data Column" sap:VirtualizedContainerService.HintSize="530,218" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_3" />
+                    <ui:AddDataColumn x:TypeArguments="x:Int32" AllowDBNull="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" AutoIncrement="True" ColumnName="RowIndex" DataTable="[ExtractDataTable]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="530,218" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2" />
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[int_Count]" DataTable="[ExtractDataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="530,388" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                       <ui:ForEachRow.Body>
                         <ActivityAction x:TypeArguments="sd:DataRow">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,192" sap2010:WorkflowViewState.IdRef="Sequence_5">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_5">
+                            <Assign sap:VirtualizedContainerService.HintSize="434,104" sap2010:WorkflowViewState.IdRef="Assign_5">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:Object">[CurrentRow("RowIndex")]</OutArgument>
                               </Assign.To>
@@ -318,53 +427,134 @@
                       </ui:ForEachRow.Body>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:ForEachRow>
-                    <ui:FilterDataTable DataTable="[ExtractDataTable]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[ExtractDataTable]" SelectColumnsMode="Remove">
-                      <ui:FilterDataTable.Filters>
-                        <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-                          <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
-                            <ui:FilterOperationArgument.Column>
-                              <InArgument x:TypeArguments="x:Int32">[int_TitleColumnIndex]</InArgument>
-                            </ui:FilterOperationArgument.Column>
-                            <ui:FilterOperationArgument.Operand>
-                              <InArgument x:TypeArguments="x:String">["Tomorrow"]</InArgument>
-                            </ui:FilterOperationArgument.Operand>
-                          </ui:FilterOperationArgument>
-                          <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
-                            <ui:FilterOperationArgument.Column>
-                              <InArgument x:TypeArguments="x:Int32">[int_TitleColumnIndex]</InArgument>
-                            </ui:FilterOperationArgument.Column>
-                            <ui:FilterOperationArgument.Operand>
-                              <InArgument x:TypeArguments="x:String">["Future"]</InArgument>
-                            </ui:FilterOperationArgument.Operand>
-                          </ui:FilterOperationArgument>
-                          <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
-                            <ui:FilterOperationArgument.Column>
-                              <InArgument x:TypeArguments="x:Int32">[int_TitleColumnIndex]</InArgument>
-                            </ui:FilterOperationArgument.Column>
-                            <ui:FilterOperationArgument.Operand>
-                              <InArgument x:TypeArguments="x:String">["Monday"]</InArgument>
-                            </ui:FilterOperationArgument.Operand>
-                          </ui:FilterOperationArgument>
-                        </scg:List>
-                      </ui:FilterDataTable.Filters>
-                      <ui:FilterDataTable.SelectColumns>
-                        <scg:List x:TypeArguments="InArgument" Capacity="4">
-                          <x:Null />
-                        </scg:List>
-                      </ui:FilterDataTable.SelectColumns>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="530,57" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,272" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:FilterDataTable DataTable="[ExtractDataTable]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="354,184" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[ExtractDataTable]" SelectColumnsMode="Remove">
+                            <ui:FilterDataTable.Filters>
+                              <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="16">
+                                <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
+                                  <ui:FilterOperationArgument.Column>
+                                    <InArgument x:TypeArguments="x:Int32">[int_TitleColumnIndex]</InArgument>
+                                  </ui:FilterOperationArgument.Column>
+                                  <ui:FilterOperationArgument.Operand>
+                                    <InArgument x:TypeArguments="x:String">["Tomorrow"]</InArgument>
+                                  </ui:FilterOperationArgument.Operand>
+                                </ui:FilterOperationArgument>
+                                <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+                                  <ui:FilterOperationArgument.Column>
+                                    <InArgument x:TypeArguments="x:Int32">[int_TitleColumnIndex]</InArgument>
+                                  </ui:FilterOperationArgument.Column>
+                                  <ui:FilterOperationArgument.Operand>
+                                    <InArgument x:TypeArguments="x:String">["Future"]</InArgument>
+                                  </ui:FilterOperationArgument.Operand>
+                                </ui:FilterOperationArgument>
+                                <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+                                  <ui:FilterOperationArgument.Column>
+                                    <InArgument x:TypeArguments="x:Int32">[int_TitleColumnIndex]</InArgument>
+                                  </ui:FilterOperationArgument.Column>
+                                  <ui:FilterOperationArgument.Operand>
+                                    <InArgument x:TypeArguments="x:String">["Monday"]</InArgument>
+                                  </ui:FilterOperationArgument.Operand>
+                                </ui:FilterOperationArgument>
+                                <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+                                  <ui:FilterOperationArgument.Column>
+                                    <InArgument x:TypeArguments="x:Int32">[int_TitleColumnIndex]</InArgument>
+                                  </ui:FilterOperationArgument.Column>
+                                  <ui:FilterOperationArgument.Operand>
+                                    <InArgument x:TypeArguments="x:String">["Tuesday"]</InArgument>
+                                  </ui:FilterOperationArgument.Operand>
+                                </ui:FilterOperationArgument>
+                                <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+                                  <ui:FilterOperationArgument.Column>
+                                    <InArgument x:TypeArguments="x:Int32">[int_TitleColumnIndex]</InArgument>
+                                  </ui:FilterOperationArgument.Column>
+                                  <ui:FilterOperationArgument.Operand>
+                                    <InArgument x:TypeArguments="x:String">["Wednesday"]</InArgument>
+                                  </ui:FilterOperationArgument.Operand>
+                                </ui:FilterOperationArgument>
+                                <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+                                  <ui:FilterOperationArgument.Column>
+                                    <InArgument x:TypeArguments="x:Int32">[int_TitleColumnIndex]</InArgument>
+                                  </ui:FilterOperationArgument.Column>
+                                  <ui:FilterOperationArgument.Operand>
+                                    <InArgument x:TypeArguments="x:String">["Thursday"]</InArgument>
+                                  </ui:FilterOperationArgument.Operand>
+                                </ui:FilterOperationArgument>
+                                <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+                                  <ui:FilterOperationArgument.Column>
+                                    <InArgument x:TypeArguments="x:Int32">[int_TitleColumnIndex]</InArgument>
+                                  </ui:FilterOperationArgument.Column>
+                                  <ui:FilterOperationArgument.Operand>
+                                    <InArgument x:TypeArguments="x:String">["Friday"]</InArgument>
+                                  </ui:FilterOperationArgument.Operand>
+                                </ui:FilterOperationArgument>
+                                <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+                                  <ui:FilterOperationArgument.Column>
+                                    <InArgument x:TypeArguments="x:Int32">[int_TitleColumnIndex]</InArgument>
+                                  </ui:FilterOperationArgument.Column>
+                                  <ui:FilterOperationArgument.Operand>
+                                    <InArgument x:TypeArguments="x:String">["Saturday"]</InArgument>
+                                  </ui:FilterOperationArgument.Operand>
+                                </ui:FilterOperationArgument>
+                                <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+                                  <ui:FilterOperationArgument.Column>
+                                    <InArgument x:TypeArguments="x:Int32">[int_TitleColumnIndex]</InArgument>
+                                  </ui:FilterOperationArgument.Column>
+                                  <ui:FilterOperationArgument.Operand>
+                                    <InArgument x:TypeArguments="x:String">["Sunday"]</InArgument>
+                                  </ui:FilterOperationArgument.Operand>
+                                </ui:FilterOperationArgument>
+                              </scg:List>
+                            </ui:FilterDataTable.Filters>
+                            <ui:FilterDataTable.SelectColumns>
+                              <scg:List x:TypeArguments="InArgument" Capacity="4">
+                                <x:Null />
+                              </scg:List>
+                            </ui:FilterDataTable.SelectColumns>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:FilterDataTable>
+                        </Sequence>
+                      </ui:CommentOut.Body>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                    </ui:FilterDataTable>
-                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,48" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                    </ui:CommentOut>
+                    <Assign DisplayName="Assign-arr_CardTitleFilters" sap:VirtualizedContainerService.HintSize="530,114" sap2010:WorkflowViewState.IdRef="Assign_8">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="s:String[]">[arr_DashboardTitleFilters]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="s:String[]">[in_Config("Yardi_UnwantedRowsWithDashboardTitles").ToString.Split(","c).Select(Function(x) x.Trim).ToArray()]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign DisplayName="Assign-FilterData" sap:VirtualizedContainerService.HintSize="530,114" sap2010:WorkflowViewState.IdRef="Assign_9">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="sd:DataTable">[ExtractDataTable]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="sd:DataTable">[If(ExtractDataTable.AsEnumerable().Where(Function(r) Not arr_DashboardTitleFilters.Any(Function(f) r(int_TitleColumnIndex).ToString().IndexOf(f, StringComparison.OrdinalIgnoreCase) &gt;= 0)).Any(), ExtractDataTable.AsEnumerable().Where(Function(r) Not arr_DashboardTitleFilters.Any(Function(f) r(int_TitleColumnIndex).ToString().IndexOf(f, StringComparison.OrdinalIgnoreCase) &gt;= 0)).CopyToDataTable(), ExtractDataTable.Clone())]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="530,48" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                       <ui:CommentOut.Body>
                         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,250" sap2010:WorkflowViewState.IdRef="Sequence_4">
                           <sap:WorkflowViewStateService.ViewState>
@@ -518,13 +708,13 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,192" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_7">
+                  <Assign sap:VirtualizedContainerService.HintSize="434,104" sap2010:WorkflowViewState.IdRef="Assign_7">
                     <Assign.To>
                       <OutArgument x:TypeArguments="sd:DataTable">[ExtractDataTable]</OutArgument>
                     </Assign.To>
@@ -548,6 +738,6 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="642,164" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;GetApplicationForReview is Complete&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="784,164" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;GetApplicationForReview is Complete&quot;]" />
   </Sequence>
 </Activity>
