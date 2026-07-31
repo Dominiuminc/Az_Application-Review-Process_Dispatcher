@@ -70,6 +70,7 @@
       "Path": "Yardi/GetApplicatioForReview.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "arr_DashboardTitleFilters&Sequence_8",
         "bool_DashboardExists&TryCatch_2",
         "int_InitialRowIndex&Sequence_1",
         "int_SkipFirstRows&Sequence_1",
@@ -246,6 +247,22 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllSettings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_SettingsAndConstants&Sequence_5",
+        "dt_Assets&Sequence_6",
+        "AssetValue&Sequence_11"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ConfigFile",
+        "in_ConfigSheets",
+        "out_Config"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }
